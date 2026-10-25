@@ -1,0 +1,9 @@
+# Python 3.10
+# 先安装与本机 CUDA 匹配的 torch/torchvision，例如 cu124：
+#   python -m pip install torch==2.6.0 torchvision==0.21.0 \
+#     --index-url https://download.pytorch.org/whl/cu124
+# 再安装本文件。
+numpy==1.26.4
+scipy==1.15.3
+scikit-learn==1.7.2
+Pillow==12.3.0

@@ -1,0 +1,32 @@
+本仓库涉及以下第三方组件与课程实验原创内容。各组件的版权与许可独立。
+
+1. MedMamba
+   上游：https://github.com/YubiaoYue/MedMamba
+   同步基线：104beb3d641d67cef6f09b94ac299083d91bc417
+   作者：Yubiao Yue, Zhenzhang Li
+   许可：上游仓库未附 LICENSE 文件。为避免未授权再分发，本仓库不包含
+         MedMamba 的模型代码、权重或其派生代码；仅保留本实验的结果、方法
+         说明与论文引用。本仓库不对 MedMamba 部分重新授权，也不声称对其
+         拥有版权。任何再分发或商业使用请先联系原作者。
+   本地实验中的改动（不随本仓库分发）：以纯 PyTorch 的 selective_scan_ref
+         替换 CUDA 融合扫描算子；隔离上游 import-time 演示代码；训练/评估
+         脚本按本实验协议重写；补充 einops 依赖。模型结构与论文贡献归上游
+         作者。
+
+2. ConvNeXt
+   上游：https://github.com/facebookresearch/ConvNeXt
+   同步基线：048efcea897d999aed302f2639b6270aedf8d4c8
+   作者：Meta Platforms, Inc. and affiliates
+   许可：MIT License，全文见 ConvNeXt/LICENSE。
+   本地改动：仅保留 models/convnext.py 的模型定义；训练/验证/测试脚本为本
+             实验按统一协议重写；未保留上游的 ImageNet 训练、目标检测、分割
+             代码。
+
+3. 本仓库原创部分
+   许可：MIT License，全文见 LICENSE，版权归 Yui-0818。
+   包括：根目录与各模型目录下由本实验编写的训练/评估脚本、README 与结果
+         整理；CSM-Net 的模型与数据管线。
+
+4. 数据
+   医学图像由任课教师提供，版权归原数据提供方。本仓库不分发任何图像、
+   标签文件或预训练权重。

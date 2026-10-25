@@ -1,0 +1,52 @@
+# ---------- Python 运行缓存 ----------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ---------- 虚拟环境 ----------
+.venv/
+venv/
+env/
+
+# ---------- 训练产物与权重（不入库） ----------
+run/
+logs/
+data/
+data_clean/
+weights/
+submission/
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.safetensors
+*.log
+*.npy
+*.npz
+STOP
+
+# ---------- 仅本地保留、不随公开仓库分发 ----------
+# MedMamba 上游无 LICENSE；模型代码与本地依赖清单留在工作区，但不入库。
+/MedMamba/*.py
+/MedMamba/requirements.txt
+/MedMamba/.gitignore
+
+# ---------- 报告、压缩包与临时文件 ----------
+docs/
+*.docx
+*.pdf
+*.zip
+*.7z
+*.tar.gz
+*.tmp
+
+# ---------- 编辑器与系统 ----------
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+Desktop.ini
+.DS_Store
