@@ -143,7 +143,10 @@ class CSMNet(nn.Module):
                  head_dim: int = 256,
                  head_dropout: float = 0.3):
         super().__init__()
-        assert len(widths) == 4 and len(depths) == 4
+        if len(widths) != 4 or len(depths) != 4:
+            raise ValueError(
+                "widths/depths 必须各为 4 个 stage，收到 widths=%r, depths=%r"
+                % (widths, depths))
         self.in_ch = in_ch
         self.use_stain_gate = bool(use_stain_gate and in_ch == 4)
         self.use_aux = bool(use_aux)
